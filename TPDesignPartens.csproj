@@ -59,9 +59,13 @@
     <Compile Include="builderPatern\directors\StarPort.cs" />
     <Compile Include="builderPatern\product\Structure.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="statePatern\Actor\IAbility.cs" />
+    <Compile Include="statePatern\Scene\ITargetable.cs" />
+    <Compile Include="statePatern\State\IStance.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
