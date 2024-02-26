@@ -12,9 +12,9 @@ namespace TPDesignPartens.statePatern.State
 
         void changeState(IStance stance);
         void move(ITargetable target);
-        void stop();
+        void stop(ITargetable owner);
         void attack(ITargetable target);
-        void updateAttribut();
+        void updateAttribut(DesctrutableUnit owner);
 
     }
 }
