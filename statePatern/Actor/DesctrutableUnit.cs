@@ -9,18 +9,14 @@ namespace TPDesignPartens.statePatern.State
     public class DesctrutableUnit
     {
         public int id { get; set; }
-        public string type { get; set; }
-        public bool isMobile { get; set; }
-        public bool isfortified { get; set; }
-        public int HP { get; set; }
-        public int tange { get; set; }
-        public int lineOfSight { get; set; }
-        public int moveSpeed { get; set; }
-        public Stance stance { get; set; }
+        public Status status { get; set; }
+        public Vitals vitals { get; set; }
         public List<IAbility> abilities { get; set; }
         public Location location { get; set; }
         public Stance availableStance { get; set; }
 
+
+        //use to store the ability being triggered.
         private delegate void runAbility(IAbility ability);
 
         public DesctrutableUnit(List<IAbility> abilities, Stance availableStance)
@@ -28,7 +24,16 @@ namespace TPDesignPartens.statePatern.State
             this.abilities = abilities;
             this.availableStance = availableStance;
             runAbility triggeringAbility = new runAbility(doAbility);
+            this.vitals = new Vitals();
+            this.status = new Status();
+        }
 
+        public DesctrutableUnit(Status status, Vitals vitals, List<IAbility> abilities, Location location, Stance availableStance)
+        {
+            this.status = status;
+            this.vitals = vitals;
+            this.abilities = abilities;
+            this.availableStance = availableStance;
         }
 
         private void doAbility(IAbility ability)

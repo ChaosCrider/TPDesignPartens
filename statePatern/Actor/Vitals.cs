@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace TPDesignPartens.statePatern.Actor
 {
-    internal class Vitals
+    public class Vitals
     {
+        public int HP { get; set; }
+        public int range { get; set; }
+        public int lineOfSight { get; set; }
+        public int moveSpeed { get; set; }
+
+        public Vitals(int hP, int range, int lineOfSight, int moveSpeed)
+        {
+            HP = hP;
+            this.range = range;
+            this.lineOfSight = lineOfSight;
+            this.moveSpeed = moveSpeed;
+        }
     }
 }

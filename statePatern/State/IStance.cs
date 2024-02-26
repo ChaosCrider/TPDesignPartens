@@ -15,6 +15,7 @@ namespace TPDesignPartens.statePatern.State
         void stop(ITargetable owner);
         void attack(ITargetable target);
         void updateAttribut(DesctrutableUnit owner);
+        void enterStance(DesctrutableUnit owner);
 
     }
 }

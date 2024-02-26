@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,12 +45,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="builderPatern\BuilderMain.cs" />
-    <Compile Include="builderPatern\Builder\Blueprint.cs" />
-    <Compile Include="builderPatern\Builder\AirBreatherBlueprint.cs" />
-    <Compile Include="builderPatern\Builder\NonBreatherBlueprint.cs" />
-    <Compile Include="builderPatern\Builder\WaterBreatherBlueprint.cs" />
+    <Compile Include="builderPatern\builder\Blueprint.cs" />
+    <Compile Include="builderPatern\builder\AirBreatherBlueprint.cs" />
+    <Compile Include="builderPatern\builder\NonBreatherBlueprint.cs" />
+    <Compile Include="builderPatern\builder\WaterBreatherBlueprint.cs" />
     <Compile Include="builderPatern\product\DescriptiveCompo.cs" />
-    <Compile Include="builderPatern\Builder\IBlueprint.cs" />
+    <Compile Include="builderPatern\builder\IBlueprint.cs" />
     <Compile Include="builderPatern\product\QuantitativeCompo.cs" />
     <Compile Include="builderPatern\product\DefencePoint.cs" />
     <Compile Include="builderPatern\product\IStructuralComponent.cs" />
@@ -59,9 +60,24 @@
     <Compile Include="builderPatern\directors\StarPort.cs" />
     <Compile Include="builderPatern\product\Structure.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="statePatern\Actor\IAbility.cs" />
-    <Compile Include="statePatern\Scene\ITargetable.cs" />
-    <Compile Include="statePatern\State\IStance.cs" />
+    <Compile Include="statePatern\actor\abilities\Enrage.cs" />
+    <Compile Include="statePatern\actor\abilities\Fortify.cs" />
+    <Compile Include="statePatern\actor\abilities\Heal.cs" />
+    <Compile Include="statePatern\actor\IUnitType.cs" />
+    <Compile Include="statePatern\actor\units\Engineer.cs" />
+    <Compile Include="statePatern\actor\units\Soldier.cs" />
+    <Compile Include="statePatern\actor\IAbility.cs" />
+    <Compile Include="statePatern\actor\Status.cs" />
+    <Compile Include="statePatern\actor\unitTypes\Civilian.cs" />
+    <Compile Include="statePatern\actor\unitTypes\Military.cs" />
+    <Compile Include="statePatern\actor\Vitals.cs" />
+    <Compile Include="statePatern\scene\ITargetable.cs" />
+    <Compile Include="statePatern\scene\Location.cs" />
+    <Compile Include="statePatern\actor\DesctrutableUnit.cs" />
+    <Compile Include="statePatern\state\AgressiveStance.cs" />
+    <Compile Include="statePatern\state\DefensiveStance.cs" />
+    <Compile Include="statePatern\state\IStance.cs" />
+    <Compile Include="statePatern\state\Stance.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
