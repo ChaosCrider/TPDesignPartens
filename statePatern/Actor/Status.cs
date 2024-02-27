@@ -22,5 +22,15 @@ namespace TPDesignPartens.statePatern.Actor
             this.isfortified = isfortified;
             this.stance = stance;
         }
+
+        public override string ToString()
+        {
+            string returnString = string.Empty;
+            returnString += "Unit Type : " + type + "\r\n";
+            returnString += "Mobile : " + isMobile + "\r\n";
+            returnString += "Fortified : " + isfortified + "\r\n";
+            returnString += "Current Stance : " + stance;
+            return returnString;
+        }
     }
 }

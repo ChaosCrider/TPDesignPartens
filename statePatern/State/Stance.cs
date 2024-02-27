@@ -81,6 +81,23 @@ namespace TPDesignPartens.statePatern.State
             doUpdate(owner);
         }
 
+        public override string ToString()
+        {
+            return this.name;
+        }
 
+        public override bool Equals(object obj)
+        {
+            if (obj.GetType() == this.GetType()) 
+            { 
+                Stance stance = (Stance)obj;
+                if (stance.name.Equals(this.name)) 
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }

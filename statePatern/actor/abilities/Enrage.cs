@@ -10,5 +10,10 @@ namespace TPDesignPartens.statePatern.actor.abilities
     public class Enrage : IAbility
     {
         public Enrage() { }
+
+        public override string ToString()
+        {
+            return "Enrage";
+        }
     }
 }

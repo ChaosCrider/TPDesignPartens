@@ -10,5 +10,10 @@ namespace TPDesignPartens.statePatern.actor.abilities
     public class Heal : IAbility
     {
         public Heal() { }
+
+        public override string ToString()
+        {
+            return "Heal";
+        }
     }
 }

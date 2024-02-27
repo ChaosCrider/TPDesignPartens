@@ -9,10 +9,25 @@ using TPDesignPartens.statePatern.State;
 
 namespace TPDesignPartens.statePatern.actor.units
 {
-    internal class Engineer : DesctrutableUnit
+    public  class Engineer : DesctrutableUnit
     {
-        public Engineer(Status status, Vitals vitals, List<IAbility> abilities, Location location, Stance availableStance) : base(status, vitals, abilities, location, availableStance)
+        public Engineer(Status status, Vitals vitals, List<IAbility> abilities, Location location, List<IStance> availableStance) : base(status, vitals, abilities, location, availableStance)
         {
+        }
+
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            return base.ToString();
         }
     }
 }

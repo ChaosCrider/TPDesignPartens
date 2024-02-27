@@ -11,5 +11,10 @@ namespace TPDesignPartens.statePatern.Scene
         {
             this.coordonates = coordonates;
         }
+
+        public Location(int x, int y) 
+        {
+            this.coordonates = new Point(x, y);
+        }
     }
 }

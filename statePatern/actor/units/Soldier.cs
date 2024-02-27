@@ -8,9 +8,9 @@ using TPDesignPartens.statePatern.State;
 
 namespace TPDesignPartens.statePatern.Actor
 {
-    internal class Soldier : DesctrutableUnit
+    public class Soldier : DesctrutableUnit
     {
-        public Soldier(Status status, Vitals vitals, List<IAbility> abilities, Location location, Stance availableStance) : base(status, vitals, abilities, location, availableStance)
+        public Soldier(Status status, Vitals vitals, List<IAbility> abilities, Location location, List<IStance> availableStance) : base(status, vitals, abilities, location, availableStance)
         {
 
         }

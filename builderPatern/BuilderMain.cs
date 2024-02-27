@@ -10,7 +10,7 @@ namespace TPDesignPartens.BuilderPatern
 {
     internal class BuilderMain
     {
-        static void Main(string[] args)
+        public static void run()
         {
             StarPort starport = new StarPort();
 
