@@ -24,8 +24,8 @@ namespace TPDesignPartens.statePatern.State
             this.abilities = abilities;
             this.availableStance = availableStance;
             runAbility triggeringAbility = new runAbility(doAbility);
-            this.vitals = new Vitals();
-            this.status = new Status();
+            this.vitals = new Vitals(0,0,0,0);
+            this.status = new Status(null, false, false, null);
         }
 
         public DesctrutableUnit(Status status, Vitals vitals, List<IAbility> abilities, Location location, Stance availableStance)
