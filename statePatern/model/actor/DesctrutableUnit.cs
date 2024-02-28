@@ -81,5 +81,11 @@ namespace TPDesignPartens.statePatern.State
         {
             return base.GetHashCode();
         }
+
+        public int getCover()
+        {
+            if(status.isfortified) return 120;
+            return 100;
+        }
     }
 }

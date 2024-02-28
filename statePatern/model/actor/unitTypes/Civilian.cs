@@ -13,14 +13,42 @@ namespace TPDesignPartens.statePatern.actor.unitTypes
         /*
          * should be controlling Delegates for the Civilian type
          */
-        public void runAttack(ITargetable target)
+        private int weapon;
+
+
+
+        public Civilian()
         {
-            throw new NotImplementedException();
+            this.weapon = 30;
+        }
+
+
+        //returns true of false if hit is lethal
+        public bool runAttack(ITargetable target)
+        {
+            if (target is DesctrutableUnit)
+            {
+                DesctrutableUnit unit = (DesctrutableUnit)target;
+                int cover = unit.getCover();
+                if (unit.status.isfortified)
+
+                if ((unit.vitals.HP -= (weapon/cover)) <= 0)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         public void runUpdate(DesctrutableUnit unit)
         {
-            throw new NotImplementedException();
+            if (unit is DesctrutableUnit)
+            {
+                DesctrutableUnit u = (DesctrutableUnit)unit;
+                if (u.status.isfortified == false) { u.status.isfortified = true; }
+                else { u.status.isfortified = false; }
+            }
         }
         public override string ToString()
         {

@@ -14,7 +14,8 @@ namespace TPDesignPartens.statePatern.actor
          * should be controlling Delegates for individual unit type
          */
 
-        void runAttack(ITargetable target);
+        //returns true of false if hit is lethal
+        bool runAttack(ITargetable target);
 
         void runUpdate(DesctrutableUnit unit);
     }
