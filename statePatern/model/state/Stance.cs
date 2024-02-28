@@ -13,7 +13,7 @@ namespace TPDesignPartens.statePatern.State
         public DesctrutableUnit owner  { get; set; }
 
         //needed for units that can attack
-        public delegate void runAttack(ITargetable target);
+        public delegate bool runAttack(ITargetable target);
         protected runAttack doAttack = null;
 
         //needed to update the units implicite statistique and potentical explicit statistique.
@@ -56,9 +56,9 @@ namespace TPDesignPartens.statePatern.State
             throw new NotImplementedException();
         }
 
-        public void attack(ITargetable target)
+        public bool attack(ITargetable target)
         {
-            doAttack(target);
+            return doAttack(target);
         }
 
         public void changeState(IStance stance)

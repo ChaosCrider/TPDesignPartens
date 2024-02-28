@@ -9,6 +9,5 @@ namespace TPDesignPartens.statePatern.Scene
 {
     public interface ITargetable
     {
-        void targeted(Location location);
     }
 }

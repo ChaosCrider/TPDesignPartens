@@ -15,9 +15,9 @@ namespace TPDesignPartens.statePatern.state
         {
         }
 
-        public void attack(ITargetable target)
+        public bool attack(ITargetable target)
         {
-            this.doAttack(target);
+            return doAttack(target);
         }
 
         public void changeState(IStance stance)

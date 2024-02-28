@@ -32,7 +32,8 @@ namespace TPDesignPartens.statePatern.actor.unitTypes
                 int cover = unit.getCover();
                 if (unit.status.isfortified)
 
-                if ((unit.vitals.HP -= (weapon/cover)) <= 0)
+                    //gets a percent effect dmg reduction by x100 / ( % x 100 )
+                if ( ( unit.vitals.HP -= ( ( weapon*100 ) / cover ) ) <= 0)
                 {
                     return true;
                 }

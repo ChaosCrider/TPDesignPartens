@@ -66,5 +66,11 @@ namespace TPDesignPartens.statePatern.actor.unitTypes
         {
             return "Military";
         }
+
+        internal void upgradeWeapon()
+        {
+            Console.WriteLine("Weapon upgraded by 1 for militatry units");
+            upgrade++;
+        }
     }
 }

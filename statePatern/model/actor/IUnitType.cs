@@ -17,6 +17,8 @@ namespace TPDesignPartens.statePatern.actor
         //returns true of false if hit is lethal
         bool runAttack(ITargetable target);
 
+
+        //curerntly only toggles isFortified
         void runUpdate(DesctrutableUnit unit);
     }
 }

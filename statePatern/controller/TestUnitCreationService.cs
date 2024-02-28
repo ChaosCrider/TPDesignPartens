@@ -37,10 +37,16 @@ namespace TPDesignPartens.statePatern.controller
             SoldierGenerator sg = new SoldierGenerator(military, abilities, availableStance);
             Soldier soldier1 = sg.createSoldier(0, 1);
 
-
+            Console.WriteLine("============================================");
             Console.WriteLine(engineer1);
+
+            Console.WriteLine();
+
+            Console.WriteLine("============================================");
             Console.WriteLine(soldier1);
 
+
+            Console.WriteLine("Press any key to continue:");
             Console.ReadLine();
         }
 

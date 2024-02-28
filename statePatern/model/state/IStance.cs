@@ -13,7 +13,7 @@ namespace TPDesignPartens.statePatern.State
         void changeState(IStance stance);
         void move(ITargetable target);
         void stop(ITargetable owner);
-        void attack(ITargetable target);
+        bool attack(ITargetable target);
         void updateAttribut(DesctrutableUnit owner);
         void enterStance(DesctrutableUnit owner);
 

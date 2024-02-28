@@ -1,4 +1,6 @@
-﻿namespace TPDesignPartens.statePatern.view
+﻿using System;
+
+namespace TPDesignPartens.statePatern.view
 {
     internal class CaptureInput: ICaptureInput
     {
@@ -6,14 +8,22 @@
         {
         }
 
-        public int CaptureInt(string str)
+        public int CaptureInt(string str, int rangeMin, int rangeMax)
         {
-            throw new System.NotImplementedException();
+            int capture = 0;
+            do
+            {
+                Console.WriteLine(str);
+                capture = int.Parse(Console.ReadLine());
+                if(capture < rangeMin || capture > rangeMax) Console.WriteLine("Value out of bound.");
+            } while (capture < rangeMin || capture > rangeMax);
+            return capture;
         }
 
         public string CaptureString(string str)
         {
-            throw new System.NotImplementedException();
+            Console.WriteLine(str);
+            return Console.ReadLine();
         }
     }
 }

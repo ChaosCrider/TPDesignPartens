@@ -6,7 +6,7 @@ using TPDesignPartens.statePatern.Scene;
 
 namespace TPDesignPartens.statePatern.State
 {
-    public class DesctrutableUnit
+    public class DesctrutableUnit : ITargetable
     {
         public int id { get; set; }
         public Status status { get; set; }
@@ -51,22 +51,28 @@ namespace TPDesignPartens.statePatern.State
             doAbility(ability);
         }
 
+
+        public string getName() 
+        {
+            return this.GetType().Name + id;
+        }
+
         public override string ToString()
         {
-            string returnString = "ID : " + id  + "\r\n" + vitals + "\r\n" + status;
+            string returnString = getName() + "\r\n" + vitals + "\r\n" + status;
 
-            returnString += "\r\nAbilities : \r\n";
+            returnString += "\r\nAbilities : ";
             foreach (IAbility ability in abilities) 
             {
-                returnString += ability.ToString();
                 returnString += "\r\n";
+                returnString += " - "+ability.ToString();
             }
 
-            returnString += "\r\nPossible stances : \r\n";
+            returnString += "\r\nPossible stances : ";
             foreach (IStance stance in availableStance) 
-            { 
-                returnString += stance.ToString();
+            {
                 returnString += "\r\n";
+                returnString += " - " + stance.ToString();
             }
             return returnString;
 

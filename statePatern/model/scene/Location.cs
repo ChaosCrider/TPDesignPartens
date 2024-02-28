@@ -3,7 +3,7 @@ using System.Reflection;
 
 namespace TPDesignPartens.statePatern.Scene
 {
-    public class Location
+    public class Location: ITargetable
     {
         public Point coordonates{ get; set; }
 
