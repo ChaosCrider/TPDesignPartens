@@ -19,6 +19,10 @@ namespace TPDesignPartens.statePatern.controller
         public static void run()
         {
 
+            //Simple creation of one unit of each type and then prints them to console.
+            //not used in this assignment and more related to testing.
+
+            //created dummy dependency injection objects
             Civilian civilian = new Civilian();
             Military military = new Military();
             
@@ -31,12 +35,15 @@ namespace TPDesignPartens.statePatern.controller
             availableStance.Add(new AgressiveStance("Aggressive", null, null, null));
             availableStance.Add(new DefensiveStance("Defence", null, null, null));
 
+
+            //Generate the two units.
             EngineerGenerator eg = new EngineerGenerator(civilian, abilities, availableStance);
             Engineer engineer1 = eg.createEngineer(0, 0);
 
             SoldierGenerator sg = new SoldierGenerator(military, abilities, availableStance);
             Soldier soldier1 = sg.createSoldier(0, 1);
 
+            //prints them to console
             Console.WriteLine("============================================");
             Console.WriteLine(engineer1);
 

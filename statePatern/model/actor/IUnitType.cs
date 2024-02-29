@@ -19,6 +19,6 @@ namespace TPDesignPartens.statePatern.actor
 
 
         //curerntly only toggles isFortified
-        void runUpdate(DesctrutableUnit unit);
+        void runUpdate(DestructibleUnit unit);
     }
 }

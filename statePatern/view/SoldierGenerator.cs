@@ -18,26 +18,11 @@ namespace TPDesignPartens.statePatern.view
 {
     public class SoldierGenerator
     {
+        private Military unitType;            // Type of military unit to generate
+        private List<IAbility> abilities;      // List of abilities the soldier possesses
+        private List<IStance> availableStance; // List of available stances for the soldier
 
-        //move all these static field into private variables populated through the constructor.
-        //move all object creation to the the controller.
-        /*
-        private Military unitType = new Military();
-        private runAttack attack = new runAttack(runAttack);
-        private runUpdate update = new runUpdate(runUpdate);
-        private Stance defaultStance = new DefensiveStance("Soldier", null, attack, update);
-        private List<IAbility> abilities = new List<IAbility>{ 
-            new Enrage(),
-            new Fortify(),
-            new Heal()
-            };
-        */
-
-
-        private Military unitType;
-        private List<IAbility> abilities;
-        private List<IStance> availableStance;
-
+        // Constructor to initialize the SoldierGenerator with unitType, abilities, and availableStance
         public SoldierGenerator(Military unitType, List<IAbility> abilities, List<IStance> availableStance)
         {
             this.unitType = unitType;
@@ -45,15 +30,29 @@ namespace TPDesignPartens.statePatern.view
             this.availableStance = availableStance;
         }
 
-        public Soldier createSoldier(int x, int y)
+        // Method to create a Soldier with specified coordinates (x, y)
+        public Soldier CreateSoldier(int x, int y)
         {
-            Stance defaultStance = new DefensiveStance("Defencive", null, unitType.runAttack, unitType.runUpdate);
+            // Create a default defensive stance for the soldier with no owner
+            Stance defaultStance = new DefensiveStance("Defensive", null, unitType.runAttack, unitType.runUpdate);
+
+            // Create Vitals for the soldier
             Vitals v = new Vitals(300, 10, 12, 3);
+
+            // Create Status for the soldier with the provided unitType and defaultStance
             Status s = new Status(unitType, true, false, defaultStance);
+
+            // Create Location for the soldier with specified coordinates (x, y)
             Location location = new Location(x, y);
+
+            // Create a Soldier instance with the created Status, Vitals, abilities, location, and available stances
             Soldier soldier = new Soldier(s, v, abilities, location, availableStance);
+
+            // Set the owner of the default stance to the created soldier
             defaultStance.owner = soldier;
-            return soldier;
+
+            return soldier;  // Return the created Soldier instance
         }
     }
+
 }

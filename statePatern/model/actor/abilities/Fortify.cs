@@ -8,6 +8,10 @@ using TPDesignPartens.statePatern.State;
 
 namespace TPDesignPartens.statePatern.actor.abilities
 {
+
+    //Ability classes are not truely leveraged for this assignement.
+
+
     internal class Fortify: IAbility
     {
         public Fortify() 

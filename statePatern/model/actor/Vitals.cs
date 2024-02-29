@@ -14,6 +14,7 @@ namespace TPDesignPartens.statePatern.Actor
         public int lineOfSight { get; set; }
         public int moveSpeed { get; set; }
 
+        // parametered ctor, intended for usage.
         public Vitals(int hp, int range, int lineOfSight, int moveSpeed)
         {
             HP = hp;
@@ -22,6 +23,7 @@ namespace TPDesignPartens.statePatern.Actor
             this.moveSpeed = moveSpeed;
         }
 
+        //no-arg ctor, not intended for usage.
         public override string ToString()
         {
             string returnString = string.Empty;

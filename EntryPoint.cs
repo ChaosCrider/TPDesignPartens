@@ -7,11 +7,13 @@ using TPDesignPartens.BuilderPatern;
 
 namespace TPDesignPartens
 {
-    internal class MainInterFace
+    internal class EntryPoint
     {
 
         static void Main(string[] args)
         {
+
+            //allows for any of the two pattern to be selected and executed.
 
             Console.WriteLine("Select with 1 or 2");
             Console.WriteLine("1. Builder Patern");

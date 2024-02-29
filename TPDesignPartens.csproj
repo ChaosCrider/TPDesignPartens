@@ -59,7 +59,7 @@
     <Compile Include="builderPatern\product\Spacecraft.cs" />
     <Compile Include="builderPatern\directors\StarPort.cs" />
     <Compile Include="builderPatern\product\Structure.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="EntryPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="statePatern\controller\SimpleCombatSimulation.cs" />
     <Compile Include="statePatern\StateMain.cs" />
@@ -77,8 +77,7 @@
     <Compile Include="statePatern\controller\TestUnitCreationService.cs" />
     <Compile Include="statePatern\model\scene\ITargetable.cs" />
     <Compile Include="statePatern\model\scene\Location.cs" />
-    <Compile Include="statePatern\model\actor\DesctrutableUnit.cs" />
-    <Compile Include="statePatern\model\scene\Player.cs" />
+    <Compile Include="statePatern\model\actor\DestructibleUnit.cs" />
     <Compile Include="statePatern\model\state\AgressiveStance.cs" />
     <Compile Include="statePatern\model\state\DefensiveStance.cs" />
     <Compile Include="statePatern\model\state\IStance.cs" />

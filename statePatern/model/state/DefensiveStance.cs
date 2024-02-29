@@ -11,7 +11,7 @@ namespace TPDesignPartens.statePatern.state
 {
     internal class DefensiveStance : Stance,IStance
     {
-        public DefensiveStance(string name, DesctrutableUnit owner, runAttack a, runUpdate u) : base(name, owner, a, u)
+        public DefensiveStance(string name, DestructibleUnit owner, runAttack a, runUpdate u) : base(name, owner, a, u)
         {
         }
 
@@ -35,7 +35,7 @@ namespace TPDesignPartens.statePatern.state
 
         }
 
-        public void updateAttribut(DesctrutableUnit owner)
+        public void updateAttribut(DestructibleUnit owner)
         {
            this.doUpdate(owner);
         }

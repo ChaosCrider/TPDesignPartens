@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="TPDesignPartens.statePatern.actor.abilities.Enrage" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="18.25" Y="0.5" Width="1.5" />
+    <Position X="12" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>statePatern\model\actor\abilities\Enrage.cs</FileName>
@@ -9,7 +9,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="TPDesignPartens.statePatern.actor.abilities.Fortify" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="20" Y="0.5" Width="1.5" />
+    <Position X="13.75" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>statePatern\model\actor\abilities\Fortify.cs</FileName>
@@ -17,38 +17,15 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="TPDesignPartens.statePatern.actor.abilities.Heal" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="16.5" Y="1.5" Width="1.5" />
+    <Position X="10.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>statePatern\model\actor\abilities\Heal.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="TPDesignPartens.statePatern.State.DesctrutableUnit">
-    <Position X="4" Y="3.75" Width="7.25" />
-    <NestedTypes>
-      <Delegate Name="TPDesignPartens.statePatern.State.DesctrutableUnit.runAbility" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>statePatern\model\actor\DesctrutableUnit.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Delegate>
-    </NestedTypes>
-    <TypeIdentifier>
-      <HashCode>AEQAAAAAAAAAAAAMgAAgAEACAAAAAIAgAAAkAAAAAgE=</HashCode>
-      <FileName>statePatern\model\actor\DesctrutableUnit.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="vitals" />
-      <Property Name="status" />
-      <Property Name="location" />
-    </ShowAsAssociation>
-    <ShowAsCollectionAssociation>
-      <Property Name="abilities" />
-    </ShowAsCollectionAssociation>
-    <Lollipop Position="0.2" />
-  </Class>
   <Class Name="TPDesignPartens.statePatern.State.Stance">
-    <Position X="3.75" Y="10.75" Width="4.75" />
+    <Position X="12" Y="9.75" Width="4.75" />
     <NestedTypes>
       <Delegate Name="TPDesignPartens.statePatern.State.Stance.runAttack" Collapsed="true">
         <TypeIdentifier>
@@ -65,56 +42,45 @@
       <HashCode>AAAACAIAAAAAgACUwAQAAAgAAAAkAACAAAAAAAAAAAA=</HashCode>
       <FileName>statePatern\model\state\Stance.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="owner" />
+    </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="TPDesignPartens.statePatern.Actor.Status">
-    <Position X="9.25" Y="11.5" Width="4.5" />
+    <Position X="17.75" Y="10" Width="4.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAUAAAAAAAABAABAAgAAAAAAAAAAAA=</HashCode>
       <FileName>statePatern\model\actor\Status.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="stance" />
       <Property Name="type" />
+      <Property Name="stance" />
     </ShowAsAssociation>
   </Class>
   <Class Name="TPDesignPartens.statePatern.Actor.Soldier">
-    <Position X="9.75" Y="8.5" Width="6.5" />
-    <InheritanceLine Type="TPDesignPartens.statePatern.State.DesctrutableUnit" FixedFromPoint="true">
-      <Path>
-        <Point X="11.25" Y="6.562" />
-        <Point X="13.75" Y="6.562" />
-        <Point X="13.75" Y="8.5" />
-      </Path>
-    </InheritanceLine>
+    <Position X="8.5" Y="8" Width="6.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEgAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>statePatern\model\actor\units\Soldier.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TPDesignPartens.statePatern.Actor.Vitals">
-    <Position X="9.75" Y="0.5" Width="3.75" />
+    <Position X="0.5" Y="0.5" Width="3.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAIEAAAAAAEAAAAAAAAQAAAAAAAACAAAAAAAAA=</HashCode>
       <FileName>statePatern\model\actor\Vitals.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TPDesignPartens.statePatern.actor.units.Engineer">
-    <Position X="0.5" Y="8.5" Width="6.75" />
-    <InheritanceLine Type="TPDesignPartens.statePatern.State.DesctrutableUnit" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="4" Y="6.625" />
-        <Point X="2.688" Y="6.625" />
-        <Point X="2.688" Y="8.5" />
-      </Path>
-    </InheritanceLine>
+    <Position X="1" Y="8" Width="6.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEgAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>statePatern\model\actor\units\Engineer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TPDesignPartens.statePatern.actor.unitTypes.Civilian" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="16.5" Y="0.5" Width="1.5" />
+    <Position X="20.5" Y="15.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAACAAAAAAAAAAABIAAAAA=</HashCode>
       <FileName>statePatern\model\actor\unitTypes\Civilian.cs</FileName>
@@ -122,7 +88,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="TPDesignPartens.statePatern.actor.unitTypes.Military" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="18.25" Y="1.5" Width="1.5" />
+    <Position X="22.25" Y="15.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEgAAAAAAAKAAAAAAAAAAABIAAAAA=</HashCode>
       <FileName>statePatern\model\actor\unitTypes\Military.cs</FileName>
@@ -130,58 +96,75 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="TPDesignPartens.statePatern.Scene.Location" BaseTypeListCollapsed="true">
-    <Position X="3.5" Y="0.75" Width="2.25" />
+    <Position X="7" Y="0.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>statePatern\model\scene\Location.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="TPDesignPartens.statePatern.scene.Player" Collapsed="true">
-    <Position X="20" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>statePatern\model\scene\Player.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="TPDesignPartens.statePatern.state.AgressiveStance">
-    <Position X="6.5" Y="16" Width="5.25" />
+    <Position X="14.75" Y="15" Width="5.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAACAAAQAAAAAAAAgAACAAAAAAAAAAAA=</HashCode>
       <FileName>statePatern\model\state\AgressiveStance.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TPDesignPartens.statePatern.state.DefensiveStance">
-    <Position X="0.5" Y="16" Width="5.25" />
+    <Position X="8.75" Y="15" Width="5.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAACAAAQAAAAAAAAgAACAAAAAAAAAAAA=</HashCode>
       <FileName>statePatern\model\state\DefensiveStance.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="TPDesignPartens.statePatern.State.IStance" Collapsed="true">
-    <Position X="16.5" Y="2.75" Width="1.5" />
+  <Class Name="TPDesignPartens.statePatern.State.DestructibleUnit">
+    <Position X="4.5" Y="3.75" Width="7" />
+    <NestedTypes>
+      <Delegate Name="TPDesignPartens.statePatern.State.DestructibleUnit.RunAbility" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>statePatern\model\actor\DestructibleUnit.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAAAAAAAAMgAAAAEACAAAAAKAAAAAAIAAABgE=</HashCode>
+      <FileName>statePatern\model\actor\DestructibleUnit.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="vitals" />
+      <Property Name="status" />
+      <Property Name="location" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="availableStance" />
+      <Property Name="abilities" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="TPDesignPartens.statePatern.State.IStance">
+    <Position X="0.5" Y="4.75" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAACAAAQAAAgAAAAgAACAAAAAAAAAAAA=</HashCode>
       <FileName>statePatern\model\state\IStance.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="TPDesignPartens.statePatern.Actor.IAbility">
-    <Position X="7" Y="1.25" Width="1.5" />
+    <Position X="10.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>statePatern\model\actor\IAbility.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="TPDesignPartens.statePatern.actor.IUnitType">
-    <Position X="12.75" Y="14.75" Width="2.75" />
+    <Position X="20.5" Y="13.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAAA=</HashCode>
       <FileName>statePatern\model\actor\IUnitType.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="TPDesignPartens.statePatern.Scene.ITargetable" Collapsed="true">
-    <Position X="18.25" Y="2.75" Width="1.5" />
+    <Position X="6.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>statePatern\model\scene\ITargetable.cs</FileName>

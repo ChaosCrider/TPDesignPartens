@@ -26,9 +26,9 @@ namespace TPDesignPartens.statePatern.actor.unitTypes
         //returns true of false if hit is lethal
         public bool runAttack(ITargetable target)
         {
-            if (target is DesctrutableUnit)
+            if (target is DestructibleUnit)
             {
-                DesctrutableUnit unit = (DesctrutableUnit)target;
+                DestructibleUnit unit = (DestructibleUnit)target;
                 int cover = unit.getCover();
                 if (unit.status.isfortified)
 
@@ -42,11 +42,13 @@ namespace TPDesignPartens.statePatern.actor.unitTypes
             return false;
         }
 
-        public void runUpdate(DesctrutableUnit unit)
+        //for the sake of the assignment, the update only toggles the isFortified value,
+        //this does not reprresent the main use of the state pattern for the assignment.
+        public void runUpdate(DestructibleUnit unit)
         {
-            if (unit is DesctrutableUnit)
+            if (unit is DestructibleUnit)
             {
-                DesctrutableUnit u = (DesctrutableUnit)unit;
+                DestructibleUnit u = (DestructibleUnit)unit;
                 if (u.status.isfortified == false) { u.status.isfortified = true; }
                 else { u.status.isfortified = false; }
             }

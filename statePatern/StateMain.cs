@@ -8,9 +8,6 @@ namespace TPDesignPartens
         internal static void run()
         {
 
-            Console.WriteLine("=== Test print ===");
-            TestUnitCreationService.run();
-            Console.WriteLine();
             Console.WriteLine("=== Test Combat ===");
 
             SimpleCombatSimulation battle = new SimpleCombatSimulation();

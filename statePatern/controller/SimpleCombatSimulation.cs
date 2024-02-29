@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Permissions;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using TPDesignPartens.statePatern.actor.abilities;
@@ -17,7 +18,7 @@ namespace TPDesignPartens.statePatern.controller
     public class SimpleCombatSimulation
     {
         // variable used only in this process
-        private List<DesctrutableUnit> team1, team2;
+        private List<DestructibleUnit> team1, team2;
         private CaptureInput ci;
         private Random random;
 
@@ -31,8 +32,10 @@ namespace TPDesignPartens.statePatern.controller
 
         public SimpleCombatSimulation()
         {
-            team1 = new List<DesctrutableUnit>();
-            team2 = new List<DesctrutableUnit>();
+
+            //creates two teams and initialise the params for the simulation object.
+            team1 = new List<DestructibleUnit>();
+            team2 = new List<DestructibleUnit>();
             ci = new CaptureInput();
 
             civilian = new Civilian();
@@ -46,11 +49,17 @@ namespace TPDesignPartens.statePatern.controller
             availableStance = new List<IStance>();
             availableStance.Add(new AgressiveStance("Aggressive", null, null, null));
             availableStance.Add(new DefensiveStance("Defence", null, null, null));
+
+            //and a randomiser object to ad variation to unit behavior.
             random = new Random();
         }
 
+
         public async void run()
-        {                
+        {
+
+            //has the two teams fight.
+
             int iturn = 1;
             int i1 = 0;
             int i2 = 0;
@@ -98,7 +107,7 @@ namespace TPDesignPartens.statePatern.controller
             else { Console.WriteLine("Team 1 wins"); }
         }
 
-        public void performTurn(int i, List<DesctrutableUnit> attacker, List<DesctrutableUnit> target)
+        public void performTurn(int i, List<DestructibleUnit> attacker, List<DestructibleUnit> target)
         {
             //choose between attack or fortify randomly
             try { 
@@ -110,7 +119,7 @@ namespace TPDesignPartens.statePatern.controller
             else
             {
                 //choose attack taget randomly from other team.
-                DesctrutableUnit defender = target[random.Next(target.Count)];
+                DestructibleUnit defender = target[random.Next(target.Count)];
                 Console.WriteLine(attacker[i].GetType().Name + attacker[i].id + " attacks " + defender.GetType().Name + defender.id + ".");
                 if (attacker[i].status.stance.attack((ITargetable)defender))
                 {
@@ -122,17 +131,18 @@ namespace TPDesignPartens.statePatern.controller
             }
             }catch (ArgumentOutOfRangeException e)
             {
+                //handles exceptions where the array hasa shorten from units dying but the index for the loop has'nt caugh up to.
             }
             
         }
 
-        public void populateTeam(List<DesctrutableUnit> team)
+        public void populateTeam(List<DestructibleUnit> team)
         {
             generateSoldiers(team);
             generateEngineer(team);
         }
 
-        public void generateEngineer(List<DesctrutableUnit> team)
+        public void generateEngineer(List<DestructibleUnit> team)
         {
             //asks for how many then adds the amount requested to the team.
             EngineerGenerator eg = new EngineerGenerator(civilian, abilities, availableStance);
@@ -141,7 +151,7 @@ namespace TPDesignPartens.statePatern.controller
             { team.Add(eg.createEngineer(0,0)); }
         }
 
-        public void generateSoldiers(List<DesctrutableUnit> team)
+        public void generateSoldiers(List<DestructibleUnit> team)
         {
             //asks for how many then adds the amount requested to the team.
             SoldierGenerator sg = new SoldierGenerator(military, abilities, availableStance);

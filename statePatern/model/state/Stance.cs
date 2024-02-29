@@ -10,7 +10,7 @@ namespace TPDesignPartens.statePatern.State
     public class Stance : IStance
     {
         public string name { get; set; }
-        public DesctrutableUnit owner  { get; set; }
+        public DestructibleUnit owner  { get; set; }
 
         //needed for units that can attack
         public delegate bool runAttack(ITargetable target);
@@ -18,7 +18,7 @@ namespace TPDesignPartens.statePatern.State
 
         //needed to update the units implicite statistique and potentical explicit statistique.
         //enterStance is meant to be call everytimethe unit enters the stance
-        public delegate void runUpdate(DesctrutableUnit unit);
+        public delegate void runUpdate(DestructibleUnit unit);
         protected runUpdate doUpdate = null;
 
         /* default contructor
@@ -32,7 +32,7 @@ namespace TPDesignPartens.statePatern.State
         */
 
 
-        public Stance(string name, DesctrutableUnit owner, runAttack a, runUpdate u)
+        public Stance(string name, DestructibleUnit owner, runAttack a, runUpdate u)
         {
             this.name = name;
             this.owner = owner;
@@ -41,12 +41,12 @@ namespace TPDesignPartens.statePatern.State
         }
 
 
-        public void enterStance(DesctrutableUnit owner)
+        public void enterStance(DestructibleUnit owner)
         {
             doUpdate(owner);
         }
 
-        public void noUpdate(DesctrutableUnit unit)
+        public void noUpdate(DestructibleUnit unit)
         {
             throw new NotImplementedException();
         }
@@ -76,7 +76,7 @@ namespace TPDesignPartens.statePatern.State
             
         }
 
-        public void updateAttribut(DesctrutableUnit owner)
+        public void updateAttribut(DestructibleUnit owner)
         {
             doUpdate(owner);
         }

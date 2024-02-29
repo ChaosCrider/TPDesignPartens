@@ -30,9 +30,9 @@ namespace TPDesignPartens.statePatern.actor.unitTypes
         //returns true of false if hit is lethal
         public bool runAttack(ITargetable target)
         {
-            if (target is DesctrutableUnit)
+            if (target is DestructibleUnit)
             {
-                DesctrutableUnit unit = (DesctrutableUnit)target;
+                DestructibleUnit unit = (DestructibleUnit)target;
                 int cover = unit.getCover();
                 if (unit.status.isfortified)
 
@@ -46,11 +46,14 @@ namespace TPDesignPartens.statePatern.actor.unitTypes
             return false;
         }
 
-        public void runUpdate(DesctrutableUnit unit)
+        //for the sake of the assignment, the update only toggles the isFortified value,
+        //this does not reprresent the main use of the state pattern for the assignment.
+        //for the soldier also adjusts move speed which I was not able to implement a use for in time.
+        public void runUpdate(DestructibleUnit unit)
         {
-            if (unit is DesctrutableUnit)
+            if (unit is DestructibleUnit)
             {
-                DesctrutableUnit u = (DesctrutableUnit)unit;
+                DestructibleUnit u = (DestructibleUnit)unit;
                 if (u.status.isfortified == false) { 
                     u.status.isfortified = true;
                     u.vitals.moveSpeed /= 2;
@@ -67,6 +70,8 @@ namespace TPDesignPartens.statePatern.actor.unitTypes
             return "Military";
         }
 
+
+        // a simple escalation of damage inflicted to reduce simulation length.
         internal void upgradeWeapon()
         {
             Console.WriteLine("Weapon upgraded by 1 for militatry units");

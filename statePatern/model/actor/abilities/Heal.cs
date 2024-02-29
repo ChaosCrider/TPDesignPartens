@@ -7,6 +7,9 @@ using TPDesignPartens.statePatern.Actor;
 
 namespace TPDesignPartens.statePatern.actor.abilities
 {
+
+    //Ability classes are not truely leveraged for this assignement.
+
     public class Heal : IAbility
     {
         public Heal() { }
