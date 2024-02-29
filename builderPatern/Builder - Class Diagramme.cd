@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="TPDesignPartens.builderPatern.Builder.AirBreatherBlueprin">
+    <Position X="3" Y="9.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>builderPatern\builder\AirBreatherBlueprint.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TPDesignPartens.builderPatern.Builder.Blueprint">
+    <Position X="7.25" Y="6.5" Width="4.25" />
+    <Members>
+      <Method Name="IBlueprint.buildHull" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAABAAAAAABIAAIAAAAAAQAAAAAAAAQAA=</HashCode>
+      <FileName>builderPatern\builder\Blueprint.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TPDesignPartens.builderPatern.Builder.NonBreatherBlueprint">
+    <Position X="12" Y="9.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>builderPatern\builder\NonBreatherBlueprint.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TPDesignPartens.builderPatern.Builder.WaterBreatherBlueprint">
+    <Position X="7.5" Y="9.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>builderPatern\builder\WaterBreatherBlueprint.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TPDesignPartens.builderPatern.Builder.DescriptiveCompo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEIAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>builderPatern\product\DescriptiveCompo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TPDesignPartens.builderPatern.Builder.QuantitativeCompo" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAEAACAAAAAAAAAAAA=</HashCode>
+      <FileName>builderPatern\product\QuantitativeCompo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TPDesignPartens.BuilderPatern.Builders.StarPort" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="TPDesignPartens.BuilderPatern.Builders.StarPort.weaponChoices" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>builderPatern\directors\StarPort.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="TPDesignPartens.BuilderPatern.Builders.StarPort.SteeringChoices" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>builderPatern\directors\StarPort.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAACAAAAAAAAAAAAAIAAAAAAAAAAAAEAI=</HashCode>
+      <FileName>builderPatern\directors\StarPort.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TPDesignPartens.BuilderPatern.Builders.DefencePoint">
+    <Position X="3" Y="2.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAgAAAAAAAgAAAAAAAEQSAAAA=</HashCode>
+      <FileName>builderPatern\product\DefencePoint.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TPDesignPartens.BuilderPatern.Builders.Spacecraft">
+    <Position X="7.25" Y="2.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAgAAAAAAAgAAAAAgAEQSAAAA=</HashCode>
+      <FileName>builderPatern\product\Spacecraft.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TPDesignPartens.BuilderPatern.Builders.StarBase">
+    <Position X="11.5" Y="2.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAgAAAAAAAAAAAAAgAEQCAAAA=</HashCode>
+      <FileName>builderPatern\product\StarBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TPDesignPartens.builderPatern.product.Structure">
+    <Position X="8" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>builderPatern\product\Structure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="TPDesignPartens.builderPatern.Builder.IBlueprint" Collapsed="true">
+    <Position X="5.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BABAIAAAAAAAAAAAAAAAAQgQAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>builderPatern\builder\IBlueprint.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TPDesignPartens.builderPatern.product.IStructuralComponent" Collapsed="true">
+    <Position X="12.75" Y="6.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>builderPatern\product\IStructuralComponent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="TPDesignPartens.builderPatern.product.IStructure" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>builderPatern\product\IStructure.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

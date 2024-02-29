@@ -16,10 +16,13 @@ namespace TPDesignPartens.statePatern.controller
 {
     public class SimpleCombatSimulation
     {
+        // variable used only in this process
         private List<DesctrutableUnit> team1, team2;
         private CaptureInput ci;
         private Random random;
 
+
+        //objects used as parametre for creation of other objects.
         Civilian civilian;
         Military military;
 
@@ -46,7 +49,7 @@ namespace TPDesignPartens.statePatern.controller
             random = new Random();
         }
 
-        public void run()
+        public async void run()
         {                
             int iturn = 1;
             int i1 = 0;
@@ -83,6 +86,7 @@ namespace TPDesignPartens.statePatern.controller
                     iturn++;
                     //increase soldier upgrade at end of each turn.
                     military.upgradeWeapon();
+                    await Task.Delay(500);
                     Console.WriteLine(" - Turn " + iturn + " - ");
                 }
 
