@@ -13,6 +13,8 @@ namespace TPDesignPartens.BuilderPatern.Builders
     public class StarPort
     {
 
+        //Fabricates product, for the sake of this assignement, the input are taken by user input.
+
         private enum weaponChoices
         {
             Kinetic,
@@ -32,7 +34,7 @@ namespace TPDesignPartens.BuilderPatern.Builders
 
 
 
-        // fabricateSpaceCraft method takes a Spacecraft object and calls its build methods
+        // fabricateSpaceCraft method takes a Spacecraft Blueprint object and calls its build methods
         public Spacecraft fabricateSpaceCraft(IBlueprint spacecraft)
         {
             Console.WriteLine("Please enter the name of this Spacecraft");
@@ -65,7 +67,7 @@ namespace TPDesignPartens.BuilderPatern.Builders
 
         }
 
-        // fabricateStarBase method takes a StarBase object and calls its build methods
+        // fabricateStarBase method takes a StarBase Blueprint object and calls its build methods
         public StarBase fabricateStarBase(IBlueprint starbase)
         {
             Console.WriteLine("Please enter the name of this Star base");
@@ -89,7 +91,7 @@ namespace TPDesignPartens.BuilderPatern.Builders
             return product;
         }
 
-        // fabricateDefencePoint method takes a DefencePoint object and calls its build methods
+        // fabricateDefencePoint method takes a DefencePoint Blueprint object and calls its build methods
         public DefencePoint fabricateDefencePoint(IBlueprint defencePoint)
         {
             Console.WriteLine("Please enter the name of this Defence Point");

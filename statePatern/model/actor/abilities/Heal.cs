@@ -7,8 +7,16 @@ using TPDesignPartens.statePatern.Actor;
 
 namespace TPDesignPartens.statePatern.actor.abilities
 {
-    public class Enrage : IAbility
+
+    //Ability classes are not truely leveraged for this assignement.
+
+    public class Heal : IAbility
     {
-        public Enrage() { }
+        public Heal() { }
+
+        public override string ToString()
+        {
+            return "Heal";
+        }
     }
 }

@@ -8,7 +8,9 @@ namespace TPDesignPartens.builderPatern.Builder
 {
     internal class NonBreatherBlueprint : Blueprint, IBlueprint
     {
-         QuantitativeCompo IBlueprint.buildLifeSupport(int size)
+
+        //overriders the default Lifesupport creation method
+        QuantitativeCompo IBlueprint.buildLifeSupport(int size)
         {
             return new QuantitativeCompo("LifeSuport_None", 0);
         }

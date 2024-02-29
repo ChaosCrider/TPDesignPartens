@@ -9,9 +9,12 @@ using TPDesignPartens.statePatern.State;
 
 namespace TPDesignPartens.statePatern.actor.units
 {
-    internal class Engineer : DesctrutableUnit
+
+    //unit classes are not leveraged for this assignement.
+
+    public  class Engineer : DestructibleUnit
     {
-        public Engineer(Status status, Vitals vitals, List<IAbility> abilities, Location location, Stance availableStance) : base(status, vitals, abilities, location, availableStance)
+        public Engineer(Status status, Vitals vitals, List<IAbility> abilities, Location location, List<IStance> availableStance) : base(status, vitals, abilities, location, availableStance)
         {
         }
     }

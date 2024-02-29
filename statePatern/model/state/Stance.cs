@@ -10,15 +10,15 @@ namespace TPDesignPartens.statePatern.State
     public class Stance : IStance
     {
         public string name { get; set; }
-        public DesctrutableUnit owner  { get; set; }
+        public DestructibleUnit owner  { get; set; }
 
         //needed for units that can attack
-        public delegate void runAttack(ITargetable target);
+        public delegate bool runAttack(ITargetable target);
         protected runAttack doAttack = null;
 
         //needed to update the units implicite statistique and potentical explicit statistique.
         //enterStance is meant to be call everytimethe unit enters the stance
-        public delegate void runUpdate(DesctrutableUnit unit);
+        public delegate void runUpdate(DestructibleUnit unit);
         protected runUpdate doUpdate = null;
 
         /* default contructor
@@ -32,7 +32,7 @@ namespace TPDesignPartens.statePatern.State
         */
 
 
-        public Stance(string name, DesctrutableUnit owner, runAttack a, runUpdate u)
+        public Stance(string name, DestructibleUnit owner, runAttack a, runUpdate u)
         {
             this.name = name;
             this.owner = owner;
@@ -41,12 +41,12 @@ namespace TPDesignPartens.statePatern.State
         }
 
 
-        public void enterStance(DesctrutableUnit owner)
+        public void enterStance(DestructibleUnit owner)
         {
             doUpdate(owner);
         }
 
-        public void noUpdate(DesctrutableUnit unit)
+        public void noUpdate(DestructibleUnit unit)
         {
             throw new NotImplementedException();
         }
@@ -56,9 +56,9 @@ namespace TPDesignPartens.statePatern.State
             throw new NotImplementedException();
         }
 
-        public void attack(ITargetable target)
+        public bool attack(ITargetable target)
         {
-            doAttack(target);
+            return doAttack(target);
         }
 
         public void changeState(IStance stance)
@@ -76,11 +76,28 @@ namespace TPDesignPartens.statePatern.State
             
         }
 
-        public void updateAttribut(DesctrutableUnit owner)
+        public void updateAttribut(DestructibleUnit owner)
         {
             doUpdate(owner);
         }
 
+        public override string ToString()
+        {
+            return this.name;
+        }
 
+        public override bool Equals(object obj)
+        {
+            if (obj.GetType() == this.GetType()) 
+            { 
+                Stance stance = (Stance)obj;
+                if (stance.name.Equals(this.name)) 
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }
