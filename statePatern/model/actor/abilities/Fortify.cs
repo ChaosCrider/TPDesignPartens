@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,22 @@ namespace TPDesignPartens.statePatern.actor.abilities
     {
         public Fortify() 
         {
+        }
+
+        public void use(DestructibleUnit owner) 
+        {
+            if(owner.status.isFortified == true) 
+            {
+                Console.WriteLine(owner.GetType().Name + owner.id + " enters fortified position.");
+                owner.status.isFortified = false;
+                owner.status.stance.enterStance(owner);
+            }
+            else 
+            {
+                Console.WriteLine(owner.GetType().Name + owner.id + " leaves fortified position.");
+                owner.status.isFortified = true;
+                owner.status.stance.enterStance(owner);
+            }
         }
 
         public override string ToString()

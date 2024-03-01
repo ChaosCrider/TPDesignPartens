@@ -17,5 +17,10 @@ namespace TPDesignPartens.statePatern.actor.units
         public Engineer(Status status, Vitals vitals, List<IAbility> abilities, Location location, List<IStance> availableStance) : base(status, vitals, abilities, location, availableStance)
         {
         }
+
+        public override void updateAttribut(DestructibleUnit owner)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

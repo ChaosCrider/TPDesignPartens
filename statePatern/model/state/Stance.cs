@@ -40,12 +40,6 @@ namespace TPDesignPartens.statePatern.State
             this.doUpdate = u;
         }
 
-
-        public void enterStance(DestructibleUnit owner)
-        {
-            doUpdate(owner);
-        }
-
         public void noUpdate(DestructibleUnit unit)
         {
             throw new NotImplementedException();
@@ -56,15 +50,17 @@ namespace TPDesignPartens.statePatern.State
             throw new NotImplementedException();
         }
 
+
+        public void enterStance(DestructibleUnit owner)
+        {
+            //need to be overriden
+        }
+
         public bool attack(ITargetable target)
         {
             return doAttack(target);
         }
 
-        public void changeState(IStance stance)
-        {
-            throw new NotImplementedException();
-        }
 
         public void move(ITargetable target)
         {
@@ -73,12 +69,7 @@ namespace TPDesignPartens.statePatern.State
 
         public void stop(ITargetable owner)
         {
-            
-        }
-
-        public void updateAttribut(DestructibleUnit owner)
-        {
-            doUpdate(owner);
+            throw new NotImplementedException();
         }
 
         public override string ToString()
@@ -99,5 +90,6 @@ namespace TPDesignPartens.statePatern.State
 
             return false;
         }
+
     }
 }
