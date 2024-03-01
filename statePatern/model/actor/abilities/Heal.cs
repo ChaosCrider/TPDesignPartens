@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TPDesignPartens.statePatern.Actor;
+using TPDesignPartens.statePatern.State;
 
 namespace TPDesignPartens.statePatern.actor.abilities
 {
@@ -17,6 +18,11 @@ namespace TPDesignPartens.statePatern.actor.abilities
         public override string ToString()
         {
             return "Heal";
+        }
+
+        public void use(DestructibleUnit owner)
+        {
+            throw new NotImplementedException();
         }
     }
 }

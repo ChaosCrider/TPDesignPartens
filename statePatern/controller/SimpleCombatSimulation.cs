@@ -114,7 +114,7 @@ namespace TPDesignPartens.statePatern.controller
             if (random.Next(2) == 0)
             {
                 Console.WriteLine(attacker[i].GetType().Name+attacker[i].id + " uses Fortify.");
-                attacker[i].status.type.runUpdate(attacker[i]);
+                    attacker[i].abilities[1].use(attacker[i]);
             }
             else
             {

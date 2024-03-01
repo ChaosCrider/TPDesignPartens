@@ -8,7 +8,6 @@ using TPDesignPartens.statePatern.actor.abilities;
 using TPDesignPartens.statePatern.actor.units;
 using TPDesignPartens.statePatern.actor.unitTypes;
 using TPDesignPartens.statePatern.Actor;
-using TPDesignPartens.statePatern.scene;
 using TPDesignPartens.statePatern.Scene;
 using TPDesignPartens.statePatern.state;
 using TPDesignPartens.statePatern.State;
@@ -31,7 +30,7 @@ namespace TPDesignPartens.statePatern.view
         }
 
         // Method to create a Soldier with specified coordinates (x, y)
-        public Soldier CreateSoldier(int x, int y)
+        public Soldier createSoldier(int x, int y)
         {
             // Create a default defensive stance for the soldier with no owner
             Stance defaultStance = new DefensiveStance("Defensive", null, unitType.runAttack, unitType.runUpdate);

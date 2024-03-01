@@ -29,7 +29,7 @@ namespace TPDesignPartens.statePatern.view
         }
 
         // Method to create an Engineer with specified coordinates (x, y)
-        public Engineer CreateEngineer(int x, int y)
+        public Engineer createEngineer(int x, int y)
         {
             // Create a default defensive stance for the engineer with no owner
             Stance defaultStance = new DefensiveStance("Defensive", null, unitType.runAttack, unitType.runUpdate);

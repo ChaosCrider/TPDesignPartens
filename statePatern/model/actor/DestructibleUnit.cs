@@ -7,7 +7,7 @@ using TPDesignPartens.statePatern.Scene;
 namespace TPDesignPartens.statePatern.State
 {
 
-    public class DestructibleUnit : ITargetable
+    public abstract class DestructibleUnit : ITargetable
     {
         public int id { get; set; }
         public Status status { get; set; }
@@ -52,7 +52,7 @@ namespace TPDesignPartens.statePatern.State
         }
 
         // Method to get the name of the DestructibleUnit
-        public string GetName()
+        public string getName()
         {
             return this.GetType().Name + id;
         }
@@ -60,7 +60,7 @@ namespace TPDesignPartens.statePatern.State
         // Override of ToString() method for better representation
         public override string ToString()
         {
-            string returnString = GetName() + "\r\n" + vitals + "\r\n" + status;
+            string returnString = getName() + "\r\n" + vitals + "\r\n" + status;
 
             returnString += "\r\nAbilities : ";
             foreach (IAbility ability in abilities)
@@ -90,11 +90,15 @@ namespace TPDesignPartens.statePatern.State
         }
 
         // Method to get the cover percentage based on the unit's status
-        public int GetCover()
+        public int getCover()
         {
             if (status.isFortified) return 120;
             return 100;
         }
+
+
+        public abstract void updateAttribut(DestructibleUnit owner);
+
     }
 
 }

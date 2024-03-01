@@ -30,7 +30,7 @@ namespace TPDesignPartens.statePatern.actor.unitTypes
             {
                 DestructibleUnit unit = (DestructibleUnit)target;
                 int cover = unit.getCover();
-                if (unit.status.isfortified)
+                if (unit.status.isFortified)
 
                     //gets a percent effect dmg reduction by x100 / ( % x 100 )
                 if ( ( unit.vitals.HP -= ( ( weapon*100 ) / cover ) ) <= 0)
@@ -49,8 +49,8 @@ namespace TPDesignPartens.statePatern.actor.unitTypes
             if (unit is DestructibleUnit)
             {
                 DestructibleUnit u = (DestructibleUnit)unit;
-                if (u.status.isfortified == false) { u.status.isfortified = true; }
-                else { u.status.isfortified = false; }
+                if (u.status.isFortified == false) { u.status.isFortified = true; }
+                else { u.status.isFortified = false; }
             }
         }
         public override string ToString()

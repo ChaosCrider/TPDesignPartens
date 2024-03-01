@@ -20,9 +20,11 @@ namespace TPDesignPartens.statePatern.state
             return doAttack(target);
         }
 
-        public void changeState(IStance stance)
+
+        public void enterStance(DestructibleUnit owner) 
         {
-            throw new NotImplementedException();
+            owner.status.isFortified = true;
+            owner.status.stance = this;
         }
 
         public void move(ITargetable target)
@@ -33,11 +35,6 @@ namespace TPDesignPartens.statePatern.state
         public void stop(ITargetable owner)
         {
 
-        }
-
-        public void updateAttribut(DestructibleUnit owner)
-        {
-           this.doUpdate(owner);
         }
 
     }
