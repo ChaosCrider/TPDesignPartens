@@ -35,82 +35,82 @@ namespace TPDesignPartens.BuilderPatern.Builders
 
 
         // fabricateSpaceCraft method takes a Spacecraft Blueprint object and calls its build methods
-        public Spacecraft fabricateSpaceCraft(IBlueprint spacecraft)
+        public Spacecraft fabricateSpaceCraft(IBlueprint blueprint)
         {
             Console.WriteLine("Please enter the name of this Spacecraft");
             Spacecraft product = new Spacecraft(Console.ReadLine());
 
             Console.WriteLine("Please enter the hull capacity in integer.");
-            product.hull = spacecraft.buildHull(int.Parse(Console.ReadLine()));
+            product.hull = blueprint.buildHull(int.Parse(Console.ReadLine()));
 
             Console.WriteLine("Please enter the life support capacity in interger.");
-            product.lifeSupport = spacecraft.buildLifeSupport(int.Parse(Console.ReadLine()));
+            product.lifeSupport = blueprint.buildLifeSupport(int.Parse(Console.ReadLine()));
 
             Console.WriteLine("Please enter the generator capacity in interger.");
-            product.powerGenerator = spacecraft.buildPowerGenerator(int.Parse(Console.ReadLine()));
+            product.powerGenerator = blueprint.buildPowerGenerator(int.Parse(Console.ReadLine()));
 
 
 
             string weaponChosen = sectectWeapon();
-            product.weapons = spacecraft.buildWeapons(weaponChosen);
+            product.weapons = blueprint.buildWeapons(weaponChosen);
 
             Console.WriteLine("Please enter the cargo capacity in interger.");
-            product.cargo = spacecraft.buildCargo(int.Parse(Console.ReadLine()));
+            product.cargo = blueprint.buildCargo(int.Parse(Console.ReadLine()));
 
             Console.WriteLine("Please enter the Engin max output in interger.");
-            product.engin = spacecraft.buildEngin(int.Parse(Console.ReadLine()));
+            product.engin = blueprint.buildEngin(int.Parse(Console.ReadLine()));
 
             string steeringChosen = selectSteering();
-            product.steering = spacecraft.buildSteering(steeringChosen);
+            product.steering = blueprint.buildSteering(steeringChosen);
 
             return product;
 
         }
 
         // fabricateStarBase method takes a StarBase Blueprint object and calls its build methods
-        public StarBase fabricateStarBase(IBlueprint starbase)
+        public StarBase fabricateStarBase(IBlueprint blueprint)
         {
             Console.WriteLine("Please enter the name of this Star base");
             StarBase product = new StarBase(Console.ReadLine());
 
             Console.WriteLine("Please enter the hull capacity in integer.");
-            product.hull = starbase.buildHull(int.Parse(Console.ReadLine()));
+            product.hull = blueprint.buildHull(int.Parse(Console.ReadLine()));
 
             Console.WriteLine("Please enter the life support capacity in interger.");
-            product.lifeSupport = starbase.buildLifeSupport(int.Parse(Console.ReadLine()));
+            product.lifeSupport = blueprint.buildLifeSupport(int.Parse(Console.ReadLine()));
 
             Console.WriteLine("Please enter the generator capacity in interger.");
-            product.powerGenerator = starbase.buildPowerGenerator(int.Parse(Console.ReadLine()));
+            product.powerGenerator = blueprint.buildPowerGenerator(int.Parse(Console.ReadLine()));
 
             string weaponChosen = sectectWeapon();
-            product.weapons = starbase.buildWeapons(weaponChosen);
+            product.weapons = blueprint.buildWeapons(weaponChosen);
 
             Console.WriteLine("Please enter the cargo capacity in interger.");
-            product.cargo = starbase.buildCargo(int.Parse(Console.ReadLine()));
+            product.cargo = blueprint.buildCargo(int.Parse(Console.ReadLine()));
             
             return product;
         }
 
         // fabricateDefencePoint method takes a DefencePoint Blueprint object and calls its build methods
-        public DefencePoint fabricateDefencePoint(IBlueprint defencePoint)
+        public DefencePoint fabricateDefencePoint(IBlueprint blueprint)
         {
             Console.WriteLine("Please enter the name of this Defence Point");
             DefencePoint product = new DefencePoint(Console.ReadLine());
 
             Console.WriteLine("Please enter the hull capacity in integer.");
-            product.hull = defencePoint.buildHull(int.Parse(Console.ReadLine()));
+            product.hull = blueprint.buildHull(int.Parse(Console.ReadLine()));
 
             Console.WriteLine("Please enter the generator capacity in interger.");
-            product.powerGenerator = defencePoint.buildPowerGenerator(int.Parse(Console.ReadLine()));
+            product.powerGenerator = blueprint.buildPowerGenerator(int.Parse(Console.ReadLine()));
 
             string weaponChosen = sectectWeapon();
-            product.weapons = defencePoint.buildWeapons(weaponChosen);
+            product.weapons = blueprint.buildWeapons(weaponChosen);
 
             Console.WriteLine("Please enter the cargo capacity in interger.");
-            product.cargo = defencePoint.buildCargo(int.Parse(Console.ReadLine()));
+            product.cargo = blueprint.buildCargo(int.Parse(Console.ReadLine()));
 
             Console.WriteLine("Please enter the Engin max output in interger.");
-            product.engin = defencePoint.buildEngin(int.Parse(Console.ReadLine()));
+            product.engin = blueprint.buildEngin(int.Parse(Console.ReadLine()));
             
             
             product.steering = new DescriptiveCompo("Steering", "Automated");
